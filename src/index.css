@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  body {
+    background-color: #FBFBFA;
+    color: #0F1115;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1115;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E333D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F25C24;
+}
+
+/* Emil Kowalski Smooth Physics Utilities */
+.ease-spring {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ease-tactile {
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Glassmorphism */
+.glass-pill {
+  background: rgba(15, 17, 21, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(22, 25, 32, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+}
+
+/* Double bezel card styling */
+.double-bezel-light {
+  background: #F3F4F6;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 6px;
+  border-radius: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.double-bezel-light:hover {
+  border-color: rgba(242, 92, 36, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -15px rgba(15, 17, 21, 0.08);
+}
+
+.double-bezel-inner {
+  background: #FFFFFF;
+  border-radius: calc(1.5rem - 6px);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Text stroke outline for massive footer watermark */
+.text-stroke-watermark {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.15);
+  color: transparent;
+  user-select: none;
+}
+
+/* Hardware accelerated transform */
+.gpu-accel {
+  transform: translateZ(0);
+  will-change: transform;
+}
