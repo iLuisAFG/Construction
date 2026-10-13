@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Production build (built by workflow or gh-pages branch)
+dist
+dist-ssr
+*.local
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent files
+.agent
+.agents
+
+# Duplicate raw folder (assets are safely in public/assets/hero-frames/)
+fotos/
